@@ -166,12 +166,12 @@ Texture loadTexture(const char* filename)
     
     // lodepng actually loads the image upside down.
     // they say they don't. but they do.
-    for (int row = 0; row < height; row++)
+    for (unsigned row = 0; row < height; row++)
     {
-        for (int col = 0; col < width; col++)
+        for (unsigned col = 0; col < width; col++)
         {
-            int imgIdx = (row * width + col);
-            int bufIdx = ((height - row - 1) * width + col) * 3;
+            unsigned imgIdx = (row * width + col);
+            unsigned bufIdx = ((height - row - 1) * width + col) * 3;
             image[imgIdx].r = buffer[bufIdx + 0] / 255.0;
             image[imgIdx].g = buffer[bufIdx + 1] / 255.0;
             image[imgIdx].b = buffer[bufIdx + 2] / 255.0;
