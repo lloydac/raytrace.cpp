@@ -9,7 +9,7 @@
 // controls the number of rays sent out per pixel.
 // the number of rays is antialiasingFactor^2, so
 // a value of 1 means no antialiasing takes place
-int antialiasingFactor = 3;
+int antialiasingFactor = 2;
 // enables orthographic viewing
 bool orthographic = false;
 // controls the number of times the ray tracer recurses
