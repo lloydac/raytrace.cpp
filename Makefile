@@ -7,7 +7,10 @@ raytrace: $(OBJ)
 	$(CXX) $(CXXFLAGS) -o raytrace $(OBJ)
 
 clean:
-	rm -fr raytrace build/*.o
+	rm -fr raytrace build
 
-build/%.o: src/%.cpp include/*.h
+build/%.o: src/%.cpp include/*.h | build/
 	$(CXX) $(CXXFLAGS) -c $< -o $@
+	
+build/:
+	mkdir build/
